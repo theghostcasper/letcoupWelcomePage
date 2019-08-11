@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Hazem Mohamed">
+    <meta name="description" content="Hazem's website, It contains my portfolio and my blog">
+    <meta name="keywords" content="Hazem Mohamed, Hazim Mohamed, Hazem Maragy, Hazim Maragy, full stack, web developer, coder, javascript developer, programmer">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/vnd.microsoft.icon">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145084945-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-145084945-1');
+	</script>
+    <title>Letscoup | Personal Site</title>
+  </head>
+  <body class="valign-wrapper">
+    <main class="container main-body white-text">
+        <h3 class="main-body--title appearDown row center">Hi</h3>
+        <h1 class="main-body--title appearDownLater center">My Name Is Hazem</h1>
+      <h4 class="main-body--mod appearUp center">I Am A Web Developer </h4>
+      <section class="button-container justAppear center">
+        <a href="#" class="button-container--btn waves-effect waves-light btn blue">My Blog</a>
+        <a href="#" class="button-container--btn waves-effect waves-light btn blue">My Portfolio</a>
+      </section>
+    </main>    
+    <div class="fixed-action-btn">
+      <a class="btn-floating skip_animation waves-effect waves-light btn-large blue tooltipped" data-tooltip="Skip intro">
+        <i class="large material-icons" >skip_next</i>
+      </a>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      let skip_animation = document.querySelector('.skip_animation');
+      skip_animation.addEventListener('click',function skipAnimation(){
+        document.querySelector('.appearDown').style.opacity = 1;
+        document.querySelector('.appearDown').style.animation = "none";
+        document.querySelector('.appearUp').style.opacity = 0.5;
+        document.querySelector('.appearUp').style.animation = "none";
+        document.querySelector('.appearDownLater').style.opacity = 1;
+        document.querySelector('.appearDownLater').style.animation = "none";
+        document.querySelector('.justAppear').style.opacity = 1;
+        document.querySelector('.justAppear').style.animation = "none";
+      });
+
+      document.addEventListener('DOMContentLoaded', function() {
+        let elems = document.querySelectorAll('.tooltipped');
+        let instances = M.Tooltip.init(elems, {position: 'left',margin:20});
+        let instance = M.Tooltip.getInstance(document.querySelector('.tooltipped'));
+        instance.open();
+      });
+      setTimeout(function hideTooltip(){
+        let instance = M.Tooltip.getInstance(document.querySelector('.tooltipped'));
+        instance.close();
+      },3000)
+    </script>
+  </body>
+</html>
